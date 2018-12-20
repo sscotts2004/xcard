@@ -1,4 +1,5 @@
 <project>
   <version></version>
   <name>xcard</xcard>
+  <packaging>jar</packaging>
 </project>
