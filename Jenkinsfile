@@ -2,7 +2,7 @@ node('maven-label') {
    def mvnHome
    stage('Preparation') { // for display purposes
       
-      git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+      git 'https://github.com/isandt/xcard.git'
              
       mvnHome = tool 'maven'
    }
