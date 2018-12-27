@@ -1,5 +1,17 @@
+@Library('pipeline-library-demo')_
+
+
+
 node('maven-label') {
    def mvnHome
+   
+   stage('shard lib Demo') {
+
+        echo 'Hello World'
+
+        sayHello 'Dave'
+
+}
    stage('Preparation') { // for display purposes
       
       git 'https://github.com/isandt/xcard.git'
