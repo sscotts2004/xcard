@@ -1,6 +1,9 @@
 @Library('pipeline-library-demo')_
 
-
+def say(String name = 'human') {
+  echo "Hello, ${name}."
+  echo "Hello, ${name}."
+}
 
 node('maven-label') {
    def mvnHome
@@ -10,6 +13,13 @@ node('maven-label') {
         echo 'Hello World'
 
         sayHello 'Dave'
+
+}
+   
+   stage('reference lib Demo') {
+
+
+        say 'Edureka'
 
 }
    stage('Preparation') { // for display purposes
