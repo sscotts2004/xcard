@@ -39,7 +39,7 @@ node('maven-label') {
   stage('Review') {
       
       if (isUnix()) {
-         sh "'${mvnHome}/bin/mvn' sonar:sonar"
+         sh "'${mvnHome}/bin/mvn' sonar:sonar -Dsonar.host.url='http://ec2-3-82-175-128.compute-1.amazonaws.com:9000'"
       } else {
          bat(/"${mvnHome}\bin\mvn" sonar:sonar/)
       }
