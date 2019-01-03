@@ -36,6 +36,14 @@ node('maven-label') {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
+  stage('Review') {
+      
+      if (isUnix()) {
+         sh "'${mvnHome}/bin/mvn' sonar:sonar"
+      } else {
+         bat(/"${mvnHome}\bin\mvn" sonar:sonar/)
+      }
+   }
    stage('Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.jar'
