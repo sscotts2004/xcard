@@ -15,4 +15,20 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+    <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>xcard-releases</id>
+      <name>xcard-releases</name>
+      <url>http://54.208.166.61:8081/nexus/content/repositories/xcard-releases/</url>
+      
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>xcard-snapshots</id>
+      <name>xcard-snapshots</name>
+      <url>http://54.208.166.61:8081/nexus/content/repositories/xcard-snapshots/</url>
+      
+    </snapshotRepository>
+   </distributionManagement>
 </project>
