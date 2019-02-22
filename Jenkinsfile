@@ -3,6 +3,7 @@ node('maven-label') {
    
  stage("shared test library")
  {
+    @Library('pipeline-library-demo')_
     echo 'Hello World'
     sayHello 'Dave'
  }
