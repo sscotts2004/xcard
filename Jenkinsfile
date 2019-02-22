@@ -1,12 +1,15 @@
 node('maven-label') {
    def mvnHome
    
+  @Library('pipeline-library-demo')_
  stage("shared test library")
  {
-   //@Library('pipeline-library-demo')_ 
-    echo 'Hello World'
-    sayHello 'Dave'
- }
+
+  echo 'Hello World'
+
+  sayHello 'Dave'
+
+} }
    
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
