@@ -1,5 +1,12 @@
 node('maven-label') {
    def mvnHome
+   
+ stage("shared test library")
+ {
+    echo 'Hello World'
+    sayHello 'Dave'
+ }
+   
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
       git 'https://github.com/sscotts2004/xcard.git'
